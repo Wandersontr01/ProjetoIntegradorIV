@@ -107,11 +107,7 @@ export class QuizComponent implements OnInit {
       Authorization: 'Basic ' + btoa(username + ':' + password),
     });
     this.http
-      .post(
-        'https://d28c5827trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/cpi/projeto4/corrige-questoes',
-        data,
-        { headers }
-      )
+    .post('/api/d28c5827trial/corrigir', data, { headers })
       .subscribe(
         (res) => {
           this.exibirExplicacao = true;
