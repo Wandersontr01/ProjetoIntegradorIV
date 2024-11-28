@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://d28c5827trial-trial.integrationsuitetrial-apim.us10.hana.ondemand.com",
+      "secure": false,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  

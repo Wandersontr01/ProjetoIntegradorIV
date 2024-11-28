@@ -83,22 +83,19 @@ export class QuizComponent implements OnInit {
       Authorization: 'Basic ' + btoa(username + ':' + password),
     });
     this.http
-      .post(
-        'https://d28c5827trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/cpi/projeto4/call-api',
-        data,
-        { headers }
-      )
-      .subscribe(
-        (res) => {
-          this.provaGerada = res;
-          this.isLoading = false;
-          console.log(res); // Armazena a prova gerada para exibição
-        },
-        (error) => {
-          console.error('Erro ao gerar a prova', error);
-          this.isLoading = false;
-        }
-      );
+  .post('/api/d28c5827trial/gerar', data, { headers })
+  .subscribe(
+    (res) => {
+      this.provaGerada = res;
+      this.isLoading = false;
+      console.log(res);
+    },
+    (error) => {
+      console.error('Erro ao gerar a prova', error);
+      this.isLoading = false;
+    }
+  );
+
   }
 
   corrigeProva(data: any) {
