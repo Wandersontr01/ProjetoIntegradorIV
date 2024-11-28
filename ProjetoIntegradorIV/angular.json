@@ -41,12 +41,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "5MB",
+                  "maximumError": "5MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
+                  "maximumWarning": "5MB",
                   "maximumError": "4kB"
                 }
               ],
@@ -94,8 +94,17 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options":{
+            "baseHref": "/ProjetoIntegradorIV/"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "13d0462e-30c8-422d-a3a3-8cec40039708"
   }
 }
